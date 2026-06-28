@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API = axios.create({
   // Ensure this matches your backend port (usually 5000)
-  baseURL: 'https://hirecraft-backend.onrender.com/api', 
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
 });
 
 // This intercepts every request and attaches your login token automatically!

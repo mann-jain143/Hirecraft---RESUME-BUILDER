@@ -1,19 +1,21 @@
 import express from 'express';
-// Wildcard import: Grabs everything so it never crashes on a mismatched name!
-import * as authController from '../controllers/authController.js';
+import {
+  registerUser,
+  loginUser,
+  getUserProfile,
+  forgotPassword,
+  resetPassword,
+  googleLogin,
+} from '../controllers/authController.js';
+import { protect } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-// Automatically detects what you named your functions in the controller
-const registerHandler = authController.register || authController.registerUser || authController.signup;
-const loginHandler = authController.login || authController.loginUser || authController.authUser || authController.authenticateUser;
-
-if (registerHandler) {
-  router.post('/register', registerHandler);
-}
-
-if (loginHandler) {
-  router.post('/login', loginHandler);
-}
+router.post('/register', registerUser);
+router.post('/login', loginUser);
+router.post('/forgot-password', forgotPassword);
+router.post('/reset-password', resetPassword);
+router.post('/google-login', googleLogin);
+router.get('/profile', protect, getUserProfile);
 
 export default router;

@@ -1,16 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { AuthProvider } from './context/AuthContext.jsx'
-import { ThemeProvider } from './context/ThemeContext.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
+import App from './App.jsx';
+import './index.css';
+import './i18n.js';
+import './App.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-    </ThemeProvider>
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
   </React.StrictMode>,
-)
+);

@@ -224,6 +224,7 @@ export const LanguagesBlock = ({ languages, theme }) => {
 };
 
 /** Renders optional sections only when data exists */
+/** Renders optional sections only when data exists */
 export const ExtraSections = ({ data, theme, titleVariant = 'default' }) => {
   const { projects, achievements, certifications, languages } = data;
   return (
@@ -253,5 +254,99 @@ export const ExtraSections = ({ data, theme, titleVariant = 'default' }) => {
         </div>
       )}
     </>
+  );
+};
+
+export const OrderedSections = ({ data, theme, sectionList, variant = 'default', titleVariant = 'default' }) => {
+  const { summary, experience, education, skills, projects, achievements, certifications, languages, settings } = data;
+  const order = settings?.sectionOrder || ['summary', 'experience', 'education', 'skills', 'projects', 'achievements', 'certifications', 'languages'];
+  const dividerOpacity = settings?.dividerOpacity !== undefined ? Number(settings.dividerOpacity) : 50;
+
+  const renderDivider = (index) => {
+    if (dividerOpacity === 0) return null;
+    return (
+      <div 
+        key={`div-${index}`} 
+        className={`my-4 h-[1px] w-full ${theme.bg || 'bg-slate-200'}`} 
+        style={{ opacity: dividerOpacity / 100 }} 
+      />
+    );
+  };
+
+  const sectionsMap = {
+    summary: summary && (
+      <div key="summary" className="resume-section break-inside-avoid">
+        {titleVariant !== 'no-title' && <SectionTitle theme={theme} variant={titleVariant}>Summary</SectionTitle>}
+        <SummaryBlock summary={summary} />
+      </div>
+    ),
+    experience: experience?.length > 0 && (
+      <div key="experience" className="resume-section break-inside-avoid">
+        <SectionTitle theme={theme} variant={titleVariant}>Experience</SectionTitle>
+        <ExperienceBlock experience={experience} theme={theme} variant={variant === 'timeline' ? 'timeline' : 'default'} />
+      </div>
+    ),
+    education: education?.length > 0 && (
+      <div key="education" className="resume-section break-inside-avoid">
+        <SectionTitle theme={theme} variant={titleVariant}>Education</SectionTitle>
+        <EducationBlock education={education} theme={theme} />
+      </div>
+    ),
+    skills: skills?.length > 0 && (
+      <div key="skills" className="resume-section break-inside-avoid">
+        <SectionTitle theme={theme} variant={titleVariant}>Skills</SectionTitle>
+        <SkillsBlock skills={skills} theme={theme} variant={variant === 'bars' ? 'bars' : 'tags'} />
+      </div>
+    ),
+    projects: projects?.length > 0 && (
+      <div key="projects" className="resume-section break-inside-avoid">
+        <SectionTitle theme={theme} variant={titleVariant}>Projects</SectionTitle>
+        <ProjectsBlock projects={projects} theme={theme} />
+      </div>
+    ),
+    achievements: achievements?.length > 0 && (
+      <div key="achievements" className="resume-section break-inside-avoid">
+        <SectionTitle theme={theme} variant={titleVariant}>Achievements</SectionTitle>
+        <AchievementsBlock achievements={achievements} theme={theme} />
+      </div>
+    ),
+    certifications: certifications?.length > 0 && (
+      <div key="certifications" className="resume-section break-inside-avoid">
+        <SectionTitle theme={theme} variant={titleVariant}>Certifications</SectionTitle>
+        <CertificationsBlock certifications={certifications} theme={theme} />
+      </div>
+    ),
+    languages: languages?.length > 0 && (
+      <div key="languages" className="resume-section break-inside-avoid">
+        <SectionTitle theme={theme} variant={titleVariant}>Languages</SectionTitle>
+        <LanguagesBlock languages={languages} theme={theme} />
+      </div>
+    ),
+  };
+
+  // Filter the customized order down to only the allowed sectionList (if provided) and only active data
+  const activeSections = order
+    .filter(name => !sectionList || sectionList.includes(name))
+    .filter(name => {
+      if (name === 'summary') return !!summary;
+      if (name === 'experience') return experience?.length > 0;
+      if (name === 'education') return education?.length > 0;
+      if (name === 'skills') return skills?.length > 0;
+      if (name === 'projects') return projects?.length > 0;
+      if (name === 'achievements') return achievements?.length > 0;
+      if (name === 'certifications') return certifications?.length > 0;
+      if (name === 'languages') return languages?.length > 0;
+      return false;
+    });
+
+  return (
+    <div className="space-y-4">
+      {activeSections.map((name, index) => (
+        <React.Fragment key={name}>
+          {sectionsMap[name]}
+          {index < activeSections.length - 1 && renderDivider(index)}
+        </React.Fragment>
+      ))}
+    </div>
   );
 };

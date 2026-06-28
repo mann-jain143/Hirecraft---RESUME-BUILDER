@@ -1,19 +1,20 @@
 import React, { useContext } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import PageLoader from './ui/PageLoader';
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
+  const location = useLocation();
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-950 dark:bg-slate-950">
-        <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
-      </div>
-    );
+  if (loading) return <PageLoader label="Checking session..." />;
+  if (!user) return <Navigate to="/login" replace />;
+
+  // Enforce profile completion on first-time login
+  if (!user.onboardingCompleted && location.pathname !== '/dashboard' && location.pathname !== '/profile') {
+    return <Navigate to="/dashboard" replace />;
   }
 
-  if (!user) return <Navigate to="/login" replace />;
   return children;
 };
 
