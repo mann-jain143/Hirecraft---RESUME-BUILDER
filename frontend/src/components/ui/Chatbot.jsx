@@ -111,11 +111,11 @@ export default function Chatbot() {
   
   // AI Coach Mode state
   const [mode, setMode] = useState(
-    localStorage.getItem('hirecraft-ai-coach-mode') || 'student'
+    localStorage.getItem('hirecraftt-ai-coach-mode') || 'student'
   );
 
   const [messages, setMessages] = useState([
-    { role: 'ai', content: "Hello! I am your HireCraft Career Coach. Ask me anything about resume formatting, work experience impact, portfolios, or interview prep!" }
+    { role: 'ai', content: "Hello! I am your HireCraftt Career Coach. Ask me anything about resume formatting, work experience impact, portfolios, or interview prep!" }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -225,13 +225,13 @@ export default function Chatbot() {
 
   const handleClear = () => {
     setMessages([
-      { role: 'ai', content: "Hello! I am your HireCraft Career Coach. Ask me anything about resume formatting, work experience impact, portfolios, or interview prep!" }
+      { role: 'ai', content: "Hello! I am your HireCraftt Career Coach. Ask me anything about resume formatting, work experience impact, portfolios, or interview prep!" }
     ]);
   };
 
   const handleModeSelection = (newMode) => {
     setMode(newMode);
-    localStorage.setItem('hirecraft-ai-coach-mode', newMode);
+    localStorage.setItem('hirecraftt-ai-coach-mode', newMode);
     toast.success(`AI Coach Mode: ${newMode.charAt(0).toUpperCase() + newMode.slice(1)}`);
   };
 

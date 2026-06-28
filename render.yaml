@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: hirecraft-backend
+    name: hirecraftt-backend
     env: node
     plan: starter
     rootDir: backend

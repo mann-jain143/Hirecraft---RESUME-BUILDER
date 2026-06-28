@@ -1,8 +1,8 @@
 {
-  "name": "hirecraft",
+  "name": "hirecraftt",
   "private": true,
   "version": "1.0.0",
-  "description": "HireCraft — AI-powered resume builder & career platform",
+  "description": "HireCraftt — AI-powered Career Operating System",
   "scripts": {
     "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
     "dev:frontend": "npm run dev --prefix frontend",

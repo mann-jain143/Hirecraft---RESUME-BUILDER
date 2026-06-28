@@ -234,7 +234,7 @@ const AIAssistantPanel = ({ isOpen, onClose }) => {
                 </div>
                 <div>
                   <h2 className="text-lg font-bold text-white">AI Assistant</h2>
-                  <p className="text-xs text-gray-500">Powered by HireCraft AI</p>
+                  <p className="text-xs text-gray-500">Powered by HireCraftt AI</p>
                 </div>
               </div>
               <button

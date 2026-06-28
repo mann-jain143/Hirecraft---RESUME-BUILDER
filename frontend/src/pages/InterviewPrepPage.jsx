@@ -30,7 +30,7 @@ export default function InterviewPrepPage() {
 
   const [timeLeft, setTimeLeft] = useState(90);
   const [beginnerMode, setBeginnerMode] = useState(
-    localStorage.getItem('hirecraft-beginner-mode') === 'true'
+    localStorage.getItem('hirecraftt-beginner-mode') === 'true'
   );
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [isListening, setIsListening] = useState(false);

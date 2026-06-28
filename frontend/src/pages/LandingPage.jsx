@@ -108,7 +108,7 @@ const features = [
 ];
 
 const testimonials = [
-  { name: 'Priya Sharma', role: 'Software Engineer at Google', quote: 'HireCraft helped me land my dream job. The AI suggestions were spot-on!', rating: 5 },
+  { name: 'Priya Sharma', role: 'Software Engineer at Google', quote: 'HireCraftt helped me land my dream job. The AI suggestions were spot-on!', rating: 5 },
   { name: 'Alex Chen', role: 'Product Manager at Meta', quote: 'The templates are stunning and ATS-friendly. Got 3x more callbacks after switching.', rating: 5 },
   { name: 'Sarah Johnson', role: 'Marketing Director', quote: 'The job match analyzer showed me exactly what was missing from my resume. Game changer!', rating: 5 },
 ];
@@ -313,7 +313,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Loved by <span className="text-gradient">Thousands</span>
             </h2>
-            <p className="text-gray-400">See what our users have to say about HireCraft</p>
+            <p className="text-gray-400">See what our users have to say about HireCraftt</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -351,7 +351,7 @@ export default function LandingPage() {
           className="max-w-3xl mx-auto text-center glass-card p-10 md:p-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Future?</h2>
-          <p className="text-gray-400 mb-8">Join thousands of professionals who've landed their dream jobs with HireCraft.</p>
+          <p className="text-gray-400 mb-8">Join thousands of professionals who've landed their dream jobs with HireCraftt.</p>
           <Link to="/register" className="btn-primary px-10 py-4 text-lg inline-flex items-center gap-2">
             Get Started Free <Sparkles className="w-5 h-5" />
           </Link>

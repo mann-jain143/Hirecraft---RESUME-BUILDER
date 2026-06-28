@@ -47,6 +47,8 @@ const ClaimInvitePage = lazy(() => import('./pages/ClaimInvitePage'));
 const SettingsPage = lazy(() => import('./pages/SettingsPage'));
 const ProfilePage = lazy(() => import('./pages/ProfilePage'));
 const PlacementPrep = lazy(() => import('./pages/PlacementPrep'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = lazy(() => import('./pages/TermsOfService'));
 
 const pageTransition = {
   initial: { opacity: 0, y: 14 },
@@ -86,6 +88,8 @@ function AnimatedRoutes() {
                 <Route path="/reset-password/:token" element={<ResetPassword />} />
                 <Route path="/u/:username" element={<Suspense fallback={<PageLoader label="Loading portfolio..." />}><PortfolioPage /></Suspense>} />
                 <Route path="/shared/:linkId" element={<Suspense fallback={<PageLoader label="Loading shared resume..." />}><RecruiterView /></Suspense>} />
+                <Route path="/privacy" element={<Suspense fallback={<PageLoader label="Loading Privacy Policy..." />}><PrivacyPolicy /></Suspense>} />
+                <Route path="/terms" element={<Suspense fallback={<PageLoader label="Loading Terms of Service..." />}><TermsOfService /></Suspense>} />
 
                 {/* Protected Routes */}
                 <Route path="/dashboard" element={<ProtectedRoute><Suspense fallback={<PageLoader label="Loading dashboard..." />}><Dashboard /></Suspense></ProtectedRoute>} />

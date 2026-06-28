@@ -11,11 +11,11 @@ export default defineConfig({
         enabled: true
       },
       manifest: {
-        name: 'HireCraft Pro',
-        short_name: 'HireCraft',
-        description: 'AI-Powered Career Platform',
-        theme_color: '#ffffff',
-        background_color: '#ffffff',
+        name: 'HireCraftt Pro',
+        short_name: 'HireCraftt',
+        description: 'AI-Powered Career Operating System',
+        theme_color: '#0a0a0a',
+        background_color: '#0a0a0a',
         display: 'standalone',
         icons: [
           {

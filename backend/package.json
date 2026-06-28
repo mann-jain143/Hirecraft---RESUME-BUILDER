@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "HireCraft API",
+  "description": "HireCraftt API",
   "main": "server.js",
   "type": "module",
   "scripts": {

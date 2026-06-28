@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────
-//  HireCraft – Sample Resumes for Demonstration & Templates
+//  HireCraftt – Sample Resumes for Demonstration & Templates
 //  10 profession-specific, realistic resumes
 // ─────────────────────────────────────────────────────────────
 

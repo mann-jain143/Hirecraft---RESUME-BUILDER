@@ -132,16 +132,24 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
         {/* Bottom copyright line */}
-        <div className="border-t border-slate-200/60 dark:border-white/5 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
-          <div className="font-semibold text-slate-700 dark:text-slate-200">
-            © 2026 <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-400 to-cyan-400 font-black tracking-wider">MANNJAIN</span>. All rights reserved.
+        <div className="mt-10 pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-slate-500 dark:text-slate-400 text-sm font-medium flex items-center gap-1.5">
+            <span>© 2026</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-pink-400 to-rose-400 font-black tracking-widest uppercase hover:scale-105 transition-transform cursor-pointer">
+              HireCraftt by MANNJAIN
+            </span>
+            <span className="text-amber-500 animate-pulse text-xs">⚡</span>
           </div>
-          <div className="flex gap-4 text-slate-500 dark:text-slate-400">
-            <span className="hover:text-brand-400 cursor-pointer transition-colors">Privacy</span>
-            <span className="hover:text-brand-400 cursor-pointer transition-colors">Terms</span>
-            <span className="text-brand-400/80">HireCraft by Mann Jain</span>
+          <div className="flex flex-wrap justify-center gap-6 items-center text-slate-500 dark:text-slate-400 text-sm font-medium">
+            <Link to="/privacy" className="hover:text-brand-400 dark:hover:text-white transition-colors duration-200">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-brand-400 dark:hover:text-white transition-colors duration-200">Terms of Service</Link>
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-full backdrop-blur-sm">
+              <span className="text-emerald-500 animate-bounce text-xs">🚀</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400 font-black tracking-widest uppercase hover:scale-105 transition-transform cursor-pointer">
+                HireCraftt by MANNJAIN
+              </span>
+            </div>
           </div>
         </div>
       </div>

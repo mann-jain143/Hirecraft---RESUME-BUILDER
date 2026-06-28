@@ -32,7 +32,7 @@ export default function PortfolioGenerator() {
   const [previewMode, setPreviewMode] = useState('desktop'); // desktop or mobile
 
   const [beginnerMode, setBeginnerMode] = useState(
-    localStorage.getItem('hirecraft-beginner-mode') === 'true'
+    localStorage.getItem('hirecraftt-beginner-mode') === 'true'
   );
   const [isHelpOpen, setIsHelpOpen] = useState(false);
 
@@ -124,7 +124,7 @@ export default function PortfolioGenerator() {
                   <span className="text-[10px] font-black uppercase tracking-wider">Student Guide: Portfolio Website</span>
                 </div>
                 <p className="text-[10px] text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Your portfolio is a professional, online page (e.g. <code>hirecraft.com/u/your-name</code>) that hosts your active resume and contact links. Recruiters can view this directly to assess your projects, skills, and credentials.
+                  Your portfolio is a professional, online page (e.g. <code>hirecraftt.com/u/your-name</code>) that hosts your active resume and contact links. Recruiters can view this directly to assess your projects, skills, and credentials.
                 </p>
               </motion.div>
             )}
@@ -132,7 +132,7 @@ export default function PortfolioGenerator() {
             <div className="space-y-4">
               <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Public URL (Username)</label>
               <div className="flex bg-slate-100 dark:bg-white/5 rounded-xl border border-slate-200 dark:border-white/10 overflow-hidden">
-                <span className="px-3 py-3 text-sm text-slate-400 border-r border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-black/20">hirecraft.com/u/</span>
+                <span className="px-3 py-3 text-sm text-slate-400 border-r border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-black/20">hirecraftt.com/u/</span>
                 <input 
                   type="text" 
                   value={portfolio.username} 
@@ -209,7 +209,7 @@ export default function PortfolioGenerator() {
               <div className="w-full bg-slate-800 rounded-t-2xl p-3 flex items-center gap-2">
                 <div className="flex gap-1.5"><div className="w-3 h-3 rounded-full bg-red-500" /><div className="w-3 h-3 rounded-full bg-amber-500" /><div className="w-3 h-3 rounded-full bg-emerald-500" /></div>
                 <div className="mx-auto px-4 py-1 bg-slate-900 rounded-md text-[10px] text-slate-400 font-mono w-1/2 text-center overflow-hidden text-ellipsis whitespace-nowrap">
-                  hirecraft.com/u/{portfolio.username}
+                  hirecraftt.com/u/{portfolio.username}
                 </div>
               </div>
               <div className="w-full flex-grow bg-white dark:bg-[#050816] rounded-b-2xl border-x border-b border-slate-300 dark:border-white/10 overflow-hidden shadow-2xl flex flex-col items-center justify-center p-8 text-center relative">
@@ -241,7 +241,7 @@ export default function PortfolioGenerator() {
             title: "What is a Professional Portfolio?",
             description: "Your digital portfolio is your personal website hosting your active resumes, project credentials, and bio description. It is a live reflection of your career history.",
             steps: [
-              "Customize your username (e.g. hirecraft.com/u/john-doe).",
+              "Customize your username (e.g. hirecraftt.com/u/john-doe).",
               "Select a matching resume source to fetch work details automatically.",
               "Pick a style theme matching your professional branding."
             ]

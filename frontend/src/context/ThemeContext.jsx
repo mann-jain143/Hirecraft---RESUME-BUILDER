@@ -4,7 +4,7 @@ const ThemeContext = createContext(null);
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('hirecraft-theme');
+    const saved = localStorage.getItem('hirecraftt-theme');
     return saved || 'auto';
   });
 
@@ -39,7 +39,7 @@ export const ThemeProvider = ({ children }) => {
       root.classList.remove('dark');
     }
     
-    localStorage.setItem('hirecraft-theme', theme);
+    localStorage.setItem('hirecraftt-theme', theme);
   }, [theme, resolvedTheme]);
 
   const themes = ['auto', 'dark', 'light'];

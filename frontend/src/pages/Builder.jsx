@@ -106,8 +106,8 @@ const BuilderContent = () => {
     setIsExporting(true);
     try {
       const filename = resumeData.personalInfo.fullName
-        ? `${resumeData.personalInfo.fullName}_HireCraft_Resume`
-        : 'HireCraft_Resume';
+        ? `${resumeData.personalInfo.fullName}_HireCraftt_Resume`
+        : 'HireCraftt_Resume';
       await exportResumeToPdf(componentRef.current, filename);
       toast.success('PDF downloaded!');
     } catch (err) {

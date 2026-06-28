@@ -133,7 +133,7 @@ function UserDashboard() {
   });
   
   const [beginnerMode, setBeginnerMode] = useState(
-    localStorage.getItem('hirecraft-beginner-mode') === 'true'
+    localStorage.getItem('hirecraftt-beginner-mode') === 'true'
   );
   const [isHelpOpen, setIsHelpOpen] = useState(false);
 
@@ -200,7 +200,7 @@ function UserDashboard() {
       "Your capability is only limited by your conviction. Let's design something spectacular.",
       "The best way to predict the future is to create it. Start building your next opportunity.",
       "Opportunity does not knock, it presents itself when you stand prepared. Let's prepare today.",
-      "Craft your story, project your value, and land your dream role. HireCraft is here to support you."
+      "Craft your story, project your value, and land your dream role. HireCraftt is here to support you."
     ];
     return quotes[new Date().getDate() % quotes.length];
   };
@@ -465,7 +465,7 @@ function UserDashboard() {
                 <span className="text-xs font-black uppercase tracking-wider">Student Beginner Mode Enabled</span>
               </div>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl">
-                Welcome to HireCraft! To get started, complete your <strong>Resume checklist</strong> on the right. 
+                Welcome to HireCraftt! To get started, complete your <strong>Resume checklist</strong> on the right. 
                 Keep track of your <strong>ATS Score</strong>: companies use applicant tracking software to scan your resume, 
                 so keeping it above 75 is crucial. Generate a <strong>Portfolio</strong> to show recruiters your work.
               </p>
@@ -1217,7 +1217,7 @@ function UserDashboard() {
         isOpen={isHelpOpen}
         onClose={() => setIsHelpOpen(false)}
         title="Student Dashboard Guide"
-        subtitle="Understand the key metrics and features of HireCraft"
+        subtitle="Understand the key metrics and features of HireCraftt"
         sections={[
           {
             title: "ATS Score Tracker",

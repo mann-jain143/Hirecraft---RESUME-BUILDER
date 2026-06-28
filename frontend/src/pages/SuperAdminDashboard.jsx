@@ -283,7 +283,7 @@ export default function SuperAdminDashboard() {
               <span className="text-[10px] uppercase tracking-widest text-indigo-400 font-extrabold">Console Mode: Platform Owner</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black font-display tracking-tight text-white leading-tight">
-              Welcome back to <span className="bg-gradient-to-r from-indigo-400 to-[#ec4899] bg-clip-text text-transparent">HireCraft Command</span>
+              Welcome back to <span className="bg-gradient-to-r from-indigo-400 to-[#ec4899] bg-clip-text text-transparent">HireCraftt Command</span>
             </h1>
             <p className="text-xs text-slate-400 leading-relaxed max-w-md font-semibold font-sans">
               Inspect real-time system metrics, manage verified profiles, verify AI ops efficiency, and track global user growth from this unified hub.
@@ -601,7 +601,7 @@ export default function SuperAdminDashboard() {
                                     />
                                   </div>
                                   <div>
-                                    <div className="font-bold text-white flex items-center gap-1.5">
+                                    <div className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                                       {u.name}
                                       {u.isPremium && <span className="text-[10px] text-amber-400" title="Premium subscription">⭐</span>}
                                     </div>
@@ -773,10 +773,10 @@ export default function SuperAdminDashboard() {
                           resumes.map((r) => (
                             <tr key={r._id} className="hover:bg-white/5 transition duration-150">
                               <td className="py-4 px-4">
-                                <div className="font-semibold text-white">{r.title}</div>
+                                <div className="font-semibold text-slate-900 dark:text-white">{r.title}</div>
                               </td>
                               <td className="py-4 px-4">
-                                <div className="font-semibold text-slate-200">{r.user?.name || 'Unknown User'}</div>
+                                <div className="font-semibold text-slate-800 dark:text-slate-200">{r.user?.name || 'Unknown User'}</div>
                                 <div className="text-xs text-slate-400">{r.user?.email || 'N/A'}</div>
                               </td>
                               <td className="py-4 px-4">
@@ -845,7 +845,7 @@ export default function SuperAdminDashboard() {
                           portfolios.map((p) => (
                             <tr key={p._id} className="hover:bg-white/5 transition duration-150">
                               <td className="py-4 px-4">
-                                <div className="font-semibold text-white">{p.user?.name || 'Unknown'}</div>
+                                <div className="font-semibold text-slate-900 dark:text-white">{p.user?.name || 'Unknown'}</div>
                                 <div className="text-xs text-slate-400">{p.user?.email || 'N/A'}</div>
                               </td>
                               <td className="py-4 px-4 font-medium text-indigo-400 uppercase text-xs">
@@ -894,7 +894,7 @@ export default function SuperAdminDashboard() {
                         {aiUsage.mostActive.map((user, idx) => (
                           <div key={idx} className="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/5">
                             <div>
-                              <div className="text-sm font-bold text-slate-200">{user.name}</div>
+                              <div className="text-sm font-bold text-slate-800 dark:text-slate-200">{user.name}</div>
                               <div className="text-xs text-slate-400">{user.email}</div>
                             </div>
                             <span className="text-xs font-bold text-pink-400 bg-pink-500/10 px-3 py-1 rounded border border-pink-500/20">
@@ -928,7 +928,7 @@ export default function SuperAdminDashboard() {
                             aiUsage.history.map((log) => (
                               <tr key={log._id}>
                                 <td className="py-4 px-4">
-                                  <div className="font-semibold text-white">{log.user?.name || 'Unknown'}</div>
+                                  <div className="font-semibold text-slate-900 dark:text-white">{log.user?.name || 'Unknown'}</div>
                                   <div className="text-xs text-slate-400">{log.user?.email || 'N/A'}</div>
                                 </td>
                                 <td className="py-4 px-4">
@@ -1060,7 +1060,7 @@ export default function SuperAdminDashboard() {
                           activities.map((log) => (
                             <tr key={log._id}>
                               <td className="py-4 px-4">
-                                <div className="font-semibold text-white">{log.user?.name || 'Unknown'}</div>
+                                <div className="font-semibold text-slate-900 dark:text-white">{log.user?.name || 'Unknown'}</div>
                                 <div className="text-xs text-slate-400">{log.user?.email || 'N/A'}</div>
                               </td>
                               <td className="py-4 px-4">
@@ -1115,7 +1115,7 @@ export default function SuperAdminDashboard() {
                           auditLogs.map((log) => (
                             <tr key={log._id}>
                               <td className="py-4 px-4">
-                                <div className="font-semibold text-white">{log.admin?.name || 'Admin'}</div>
+                                <div className="font-semibold text-slate-900 dark:text-white">{log.admin?.name || 'Admin'}</div>
                                 <div className="text-xs text-slate-400">{log.admin?.email}</div>
                               </td>
                               <td className="py-4 px-4">
@@ -1126,7 +1126,7 @@ export default function SuperAdminDashboard() {
                               <td className="py-4 px-4">
                                 {log.targetUser ? (
                                   <>
-                                    <div className="font-medium text-slate-200">{log.targetUser.name}</div>
+                                    <div className="font-medium text-slate-800 dark:text-slate-200">{log.targetUser.name}</div>
                                     <div className="text-xs text-slate-400">{log.targetUser.email}</div>
                                   </>
                                 ) : (
@@ -1183,7 +1183,7 @@ export default function SuperAdminDashboard() {
                 </div>
                 <div>
                   <div className="flex flex-wrap items-center gap-3">
-                    <h2 className="text-2xl font-bold text-white">{selectedUser.name}</h2>
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white">{selectedUser.name}</h2>
                     <span className="text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2 py-0.5 rounded uppercase">{selectedUser.role}</span>
                     <span className="text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded uppercase">{selectedUser.status}</span>
                   </div>
@@ -1242,7 +1242,7 @@ export default function SuperAdminDashboard() {
                             {inspectData.resumes.map(res => (
                               <div key={res._id} className="flex justify-between items-center bg-slate-950/40 p-2.5 rounded-lg border border-white/5 text-xs">
                                 <div>
-                                  <div className="font-semibold text-slate-200">{res.title}</div>
+                                  <div className="font-semibold text-slate-800 dark:text-slate-200">{res.title}</div>
                                   <div className="text-slate-400 font-mono">Last update: {new Date(res.updatedAt).toLocaleDateString()}</div>
                                 </div>
                                 <div className="flex gap-2">

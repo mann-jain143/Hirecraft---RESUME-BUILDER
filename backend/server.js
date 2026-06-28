@@ -56,7 +56,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.get('/api/health', (req, res) => {
   res.status(200).json({ 
     status: 'success', 
-    message: 'HireCraft API is running smoothly. 🚀' 
+    message: 'HireCraftt API is running smoothly. 🚀' 
   });
 });
 

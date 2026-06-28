@@ -197,7 +197,7 @@ export default function Onboarding({ onComplete, userName, user }) {
             >
               <div>
                 <h2 className="text-xl sm:text-2xl font-extrabold text-white">
-                  Welcome to HireCraft
+                  Welcome to HireCraftt
                 </h2>
                 <p className="text-slate-400 text-xs mt-0.5">
                   Explore the 5 core modules designed to accelerate your career growth:
@@ -250,7 +250,7 @@ export default function Onboarding({ onComplete, userName, user }) {
                 </h2>
                 <p className="text-slate-400 text-sm mt-1 max-w-sm mx-auto font-medium">
                   {user?.careerField 
-                    ? "Please complete your profile details to unlock your HireCraft account."
+                    ? "Please complete your profile details to unlock your HireCraftt account."
                     : `Onboarding completed for ${careerField || 'your job profile'}. Let's fill out your profile details to activate your account.`}
                 </p>
                 

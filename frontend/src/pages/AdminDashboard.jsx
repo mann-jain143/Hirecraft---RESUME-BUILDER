@@ -146,7 +146,7 @@ export default function AdminDashboard() {
                 <span className="text-[10px] uppercase tracking-widest text-amber-500 font-extrabold">Admin Command Center</span>
               </div>
               <h1 className="text-2xl sm:text-3xl font-black font-display tracking-tight text-white leading-tight">
-                Welcome to <span className="bg-gradient-to-r from-amber-400 to-[#ec4899] bg-clip-text text-transparent">HireCraft Operations</span>
+                Welcome to <span className="bg-gradient-to-r from-amber-400 to-[#ec4899] bg-clip-text text-transparent">HireCraftt Operations</span>
               </h1>
               <p className="text-xs text-slate-400 leading-relaxed max-w-md font-semibold font-sans">
                 Review platform statistics, monitor candidate activities, search user records, and maintain service security protocols.
@@ -250,7 +250,7 @@ export default function AdminDashboard() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-lg h-80 overflow-hidden">
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-white"><Activity className="w-5 h-5 text-[#7c5cff]" /> Live Activity</h3>
+            <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-slate-900 dark:text-white"><Activity className="w-5 h-5 text-[#7c5cff]" /> Live Activity</h3>
             <div className="space-y-3 overflow-y-auto max-h-64 no-scrollbar">
               {activity.length === 0 ? (
                 <p className="text-slate-500 text-sm">No activity yet — AI ops will appear here.</p>
@@ -258,7 +258,7 @@ export default function AdminDashboard() {
                 <motion.div key={log._id || i} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5">
                   <Sparkles className="w-4 h-4 text-brand-400 shrink-0" />
                   <div className="min-w-0">
-                    <p className="text-sm font-medium text-slate-200 truncate">{log.details || log.action}</p>
+                    <p className="text-sm font-medium text-slate-800 dark:text-slate-200 truncate">{log.details || log.action}</p>
                     <p className="text-xs text-slate-500">{log.user?.name || 'User'} • {new Date(log.createdAt).toLocaleString()}</p>
                   </div>
                 </motion.div>
@@ -397,7 +397,7 @@ export default function AdminDashboard() {
                             <span className={`absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-slate-900 ${u.isOnline ? 'bg-emerald-500 animate-pulse' : 'bg-slate-500'}`} />
                           </div>
                           <div>
-                            <div className="font-bold text-white flex items-center gap-1.5">
+                            <div className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                               {u.name}
                               {u.isPremium && <span className="text-[10px] text-amber-400">⭐</span>}
                             </div>
@@ -407,7 +407,7 @@ export default function AdminDashboard() {
                       </td>
 
                       <td className="py-4 px-5 space-y-1">
-                        <div className="font-bold text-slate-200">{u.role}</div>
+                        <div className="font-bold text-slate-800 dark:text-slate-200">{u.role}</div>
                         <span className={`text-[9px] font-black uppercase px-2 py-0.5 rounded ${
                           u.status === 'suspended' ? 'bg-yellow-500/10 text-yellow-400 border border-yellow-500/20' :
                           u.status === 'banned' ? 'bg-red-500/10 text-red-500 border border-red-500/20' :

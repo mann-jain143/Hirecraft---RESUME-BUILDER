@@ -64,7 +64,7 @@ export default function RecruiterView() {
           <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-xs">HC</span>
           </div>
-          <span className="font-bold font-display text-slate-900 tracking-tight hidden sm:block">HireCraft Recruiter Portal</span>
+          <span className="font-bold font-display text-slate-900 tracking-tight hidden sm:block">HireCraftt Recruiter Portal</span>
         </div>
         <button className="btn-primary flex items-center gap-2 py-2 px-4 text-sm">
           <Download className="w-4 h-4" /> Download PDF

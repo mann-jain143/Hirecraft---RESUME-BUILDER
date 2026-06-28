@@ -27,7 +27,7 @@ export default function SettingsPage() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `hirecraft-export-${new Date().toISOString().slice(0,10)}.json`;
+      a.download = `hirecraftt-export-${new Date().toISOString().slice(0,10)}.json`;
       a.click();
       toast.success('Data exported successfully!');
     } catch (err) {

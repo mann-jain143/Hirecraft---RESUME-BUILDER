@@ -53,7 +53,7 @@ export default function CoverLetterPage() {
   const letterRef = useRef(null);
 
   const [beginnerMode, setBeginnerMode] = useState(
-    localStorage.getItem('hirecraft-beginner-mode') === 'true'
+    localStorage.getItem('hirecraftt-beginner-mode') === 'true'
   );
   const [isHelpOpen, setIsHelpOpen] = useState(false);
 

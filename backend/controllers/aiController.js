@@ -275,7 +275,7 @@ export const chatCoach = async (req, res) => {
       return res.status(400).json({ message: 'Messages array is required' });
     }
 
-    let systemInstruction = `You are HireCraft's elite career coach and resume expert. Give brief, actionable advice on resumes, interviews, LinkedIn, and career growth. Use bullet points when helpful.`;
+    let systemInstruction = `You are HireCraftt's elite career coach and resume expert. Give brief, actionable advice on resumes, interviews, LinkedIn, and career growth. Use bullet points when helpful.`;
 
     const activeMode = mode || 'student'; // Default to Student Mode
     
@@ -292,7 +292,7 @@ export const chatCoach = async (req, res) => {
 
     const contents = [
       { role: 'user', parts: [{ text: systemInstruction }] },
-      { role: 'model', parts: [{ text: "I'm your HireCraft Career Coach. How can I help you today?" }] },
+      { role: 'model', parts: [{ text: "I'm your HireCraftt Career Coach. How can I help you today?" }] },
     ];
 
     messages.forEach((msg) => {
@@ -471,7 +471,7 @@ export const handleChat = async (req, res) => {
     const genAI = new GoogleGenerativeAI(apiKey);
     
     // Custom "Executive Recruiter" System Instructions
-    const systemInstruction = `You are HireCraft's elite Executive Recruiter and AI Career Coach. You have decades of experience placing top-tier talent (Software Engineers, Product Managers, Designers, Marketers) at Fortune 500 companies and high-growth startups. Your advice is direct, tactical, and result-oriented. Focus on quantifiable achievements, ATS optimization, and executive branding. Respond professionally, and use structured formatting or bullet points when appropriate.`;
+    const systemInstruction = `You are HireCraftt's elite Executive Recruiter and AI Career Coach. You have decades of experience placing top-tier talent (Software Engineers, Product Managers, Designers, Marketers) at Fortune 500 companies and high-growth startups. Your advice is direct, tactical, and result-oriented. Focus on quantifiable achievements, ATS optimization, and executive branding. Respond professionally, and use structured formatting or bullet points when appropriate.`;
 
     const userMessage = messages[messages.length - 1];
     const previousMessages = messages.slice(0, -1);

@@ -17,7 +17,7 @@ export default function CareerCoachChat() {
   const [isMinimized, setIsMinimized] = useState(false);
   const [hasFetched, setHasFetched] = useState(false);
   const [messages, setMessages] = useState([
-    { role: 'model', content: "Hello! I am your HireCraft AI Career Coach. Ask me anything about resume writing, portfolio building, LinkedIn SEO, or interview prep!" }
+    { role: 'model', content: "Hello! I am your HireCraftt AI Career Coach. Ask me anything about resume writing, portfolio building, LinkedIn SEO, or interview prep!" }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -109,7 +109,7 @@ export default function CareerCoachChat() {
 
   const handleClear = () => {
     setMessages([
-      { role: 'model', content: "Hello! I am your HireCraft AI Career Coach. Ask me anything about resume writing, portfolio building, LinkedIn SEO, or interview prep!" }
+      { role: 'model', content: "Hello! I am your HireCraftt AI Career Coach. Ask me anything about resume writing, portfolio building, LinkedIn SEO, or interview prep!" }
     ]);
   };
 

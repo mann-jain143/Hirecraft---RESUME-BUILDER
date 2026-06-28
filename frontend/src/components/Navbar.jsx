@@ -46,7 +46,7 @@ export default function Navbar({ syncStatus = 'idle' }) {
   const [isSidebarHovered, setIsSidebarHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
   const [beginnerMode, setBeginnerMode] = useState(
-    localStorage.getItem('hirecraft-beginner-mode') === 'true'
+    localStorage.getItem('hirecraftt-beginner-mode') === 'true'
   );
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function Navbar({ syncStatus = 'idle' }) {
   const toggleBeginnerMode = () => {
     const newValue = !beginnerMode;
     setBeginnerMode(newValue);
-    localStorage.setItem('hirecraft-beginner-mode', String(newValue));
+    localStorage.setItem('hirecraftt-beginner-mode', String(newValue));
     window.dispatchEvent(new CustomEvent('beginner-mode-change', { detail: newValue }));
     toast.success(newValue ? 'Beginner Mode Enabled! Helpful tips will be shown.' : 'Beginner Mode Disabled.');
   };
@@ -698,7 +698,7 @@ export default function Navbar({ syncStatus = 'idle' }) {
                   )}
                 </div>
                 <div className="min-w-0 flex-1">
-                  <span className="text-xs font-bold text-slate-200 block truncate">{user?.name}</span>
+                  <span className="text-xs font-bold text-slate-800 dark:text-slate-200 block truncate">{user?.name}</span>
                   <span className="text-[9px] text-slate-500 block truncate">{user?.email}</span>
                 </div>
               </div>
@@ -794,7 +794,7 @@ export default function Navbar({ syncStatus = 'idle' }) {
                     )}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <span className="text-xs font-bold text-slate-200 block truncate">{user?.name}</span>
+                    <span className="text-xs font-bold text-slate-800 dark:text-slate-200 block truncate">{user?.name}</span>
                     <span className="text-[9px] text-slate-500 dark:text-slate-400 block truncate">{user?.email}</span>
                   </div>
                 </div>

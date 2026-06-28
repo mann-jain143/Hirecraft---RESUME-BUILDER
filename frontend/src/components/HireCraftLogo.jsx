@@ -55,7 +55,7 @@ const HireCraftLogo = ({ className = 'w-8 h-8', showText = true, textClassName =
     
     {showText && (
       <span className={`text-xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-violet-500 hover:from-indigo-300 hover:to-violet-400 transition-colors duration-300 font-display ${textClassName}`}>
-        HireCraft
+        HireCraftt
       </span>
     )}
   </div>

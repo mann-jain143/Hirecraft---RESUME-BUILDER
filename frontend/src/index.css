@@ -549,3 +549,59 @@ body, header, aside, main, .glass-panel, .glass-card, nav, .hc-card, .hc-3d-card
   20%, 60% { transform: translateX(-6px); }
   40%, 80% { transform: translateX(6px); }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Light Mode Overrides for Dashboards (Tables, Cards, Inputs, Selects)
+   ───────────────────────────────────────────────────────────────────────────── */
+html.light [class*="bg-slate-900"],
+html.light [class*="bg-slate-950"],
+html.light [class*="bg-white/5"],
+html.light [class*="bg-white/[0.02]"],
+html.light [class*="bg-gradient-to-br from-slate-900"],
+html.light [class*="from-slate-900"] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light select,
+html.light input {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+html.light select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200,
+html.light .text-slate-300,
+html.light .text-slate-400,
+html.light .text-slate-500,
+html.light .text-indigo-400 {
+  color: #334155 !important;
+}
+
+html.light .divide-white\/5 > *,
+html.light .divide-white\/10 > * {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .border-white\/5,
+html.light .border-white\/10 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23475569' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
+  background-position: right 0.5rem center !important;
+  background-repeat: no-repeat !important;
+  background-size: 1.5em 1.5em !important;
+  padding-right: 2.5rem !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}

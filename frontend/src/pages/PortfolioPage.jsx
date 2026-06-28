@@ -31,7 +31,7 @@ export default function PortfolioPage() {
   if (error || !portfolio) return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-4 bg-[#050816] text-white px-6">
       <p className="font-bold text-lg">{error}</p>
-      <a href="/" className="text-brand-400 hover:text-brand-300 text-sm transition-colors">← Back to HireCraft</a>
+      <a href="/" className="text-brand-400 hover:text-brand-300 text-sm transition-colors">← Back to HireCraftt</a>
     </div>
   );
 
@@ -166,7 +166,7 @@ export default function PortfolioPage() {
       </main>
 
       <footer className="py-10 text-center border-t border-slate-200 dark:border-white/10 opacity-60 text-sm">
-        <p>Built with <span className="font-bold">HireCraft</span></p>
+        <p>Built with <span className="font-bold">HireCraftt</span></p>
       </footer>
     </div>
   );

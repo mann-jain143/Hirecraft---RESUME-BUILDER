@@ -21,7 +21,7 @@ export const exportAccountData = async (req, res) => {
     // Send an email confirmation (mock)
     await sendEmail({
       to: user.email,
-      subject: 'Your HireCraft Data Export',
+      subject: 'Your HireCraftt Data Export',
       text: 'You recently requested a backup of your account data. The export was successful.'
     });
 

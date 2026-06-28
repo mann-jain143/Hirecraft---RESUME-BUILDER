@@ -1,6 +1,6 @@
 import html2pdf from 'html2pdf.js';
 
-export const exportResumeToPdf = async (element, filename = 'HireCraft_Resume') => {
+export const exportResumeToPdf = async (element, filename = 'HireCraftt_Resume') => {
   if (!element) return;
 
   const opt = {
@@ -42,7 +42,7 @@ export const printResume = (element) => {
     <!DOCTYPE html>
     <html>
       <head>
-        <title>HireCraft Resume</title>
+        <title>HireCraftt Resume</title>
         ${styles}
         <style>
           @page { size: A4; margin: 0; }
