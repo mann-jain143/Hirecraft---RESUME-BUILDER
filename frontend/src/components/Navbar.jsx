@@ -188,17 +188,6 @@ export default function Navbar({ syncStatus = 'idle' }) {
   };
 
   const getSidebarMenu = () => {
-    if (user && !user.onboardingCompleted) {
-      return [
-        {
-          group: 'Onboarding',
-          items: [
-            { label: 'Complete Profile', path: '/profile', icon: User },
-          ]
-        }
-      ];
-    }
-
     const role = user?.role || 'USER';
     
     if (role === 'SUPER_ADMIN') {
@@ -270,12 +259,12 @@ export default function Navbar({ syncStatus = 'idle' }) {
                 {isMobileSidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             )}
-            <Link to={user && !user.onboardingCompleted ? "/profile" : "/dashboard"} className="flex items-center">
+            <Link to="/dashboard" className="flex items-center">
               <HireCraftLogo className="w-8 h-8" />
             </Link>
 
             {/* Main Links */}
-            {user && user.onboardingCompleted && user.role !== 'ADMIN' && (
+            {user && user.role !== 'ADMIN' && (
               <div className="hidden lg:flex items-center gap-1.5 ml-6 pl-6 border-l border-slate-200 dark:border-white/10 text-xs font-semibold">
                 <Link to="/dashboard" className="px-3 py-1.5 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition">Dashboard</Link>
                 <Link to="/builder/new" className="px-3 py-1.5 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition">Resume Builder</Link>
@@ -291,7 +280,7 @@ export default function Navbar({ syncStatus = 'idle' }) {
           </div>
 
           {/* Center: Search Trigger */}
-          {user && user.onboardingCompleted && (
+          {user && (
             <div className="flex-1 max-w-[240px] hidden sm:block relative">
               <CommandPalette />
             </div>
@@ -309,7 +298,7 @@ export default function Navbar({ syncStatus = 'idle' }) {
             )}
 
             {/* Notifications */}
-            {user && user.onboardingCompleted && (
+            {user && (
               <div className="relative" ref={notifRef}>
                 <button
                   onClick={() => setNotifMenuOpen(!notifMenuOpen)}

@@ -10,11 +10,6 @@ const ProtectedRoute = ({ children }) => {
   if (loading) return <PageLoader label="Checking session..." />;
   if (!user) return <Navigate to="/login" replace />;
 
-  // Enforce profile completion on first-time login
-  if (!user.onboardingCompleted && location.pathname !== '/dashboard' && location.pathname !== '/profile') {
-    return <Navigate to="/dashboard" replace />;
-  }
-
   return children;
 };
 

@@ -242,7 +242,7 @@ function UserDashboard() {
       setAchievements(d.achievements || []);
       setAtsChartData(d.atsChartData || []);
       setActivityTimeline(d.activityTimeline || []);
-      setOnboardingCompleted(d.onboardingCompleted);
+      setOnboardingCompleted(true);
       setCareerField(d.careerField);
       setPortfolioUsername(d.portfolioUsername);
       setGamification({ points: d.points || 0, streak: d.currentStreak || 0 });
