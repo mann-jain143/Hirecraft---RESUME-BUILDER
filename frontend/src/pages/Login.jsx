@@ -21,7 +21,7 @@ const Github = (props) => (
   </svg>
 );
 
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net|edu|gov|io|co|us|uk|ca|au|de|fr|jp)$/i;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const Login = () => {
   const [email, setEmail] = useState('');

@@ -502,7 +502,7 @@ function UserDashboard() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="relative overflow-hidden p-6 sm:p-8 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
+                className="relative overflow-hidden p-6 sm:p-8 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
               >
                 <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-[#7c5cff]/10 rounded-full blur-[60px] pointer-events-none" />
                 <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
@@ -584,7 +584,7 @@ function UserDashboard() {
                     onClick={action.action}
                     whileHover={{ scale: 1.02, y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                     whileTap={{ scale: 0.98 }}
-                    className={`flex flex-col sm:flex-row items-center gap-2.5 p-4 rounded-2xl border text-center justify-center sm:justify-start transition-all duration-300 font-semibold text-xs cursor-pointer bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 ${action.color}`}
+                    className={`flex flex-col sm:flex-row items-center gap-2.5 p-4 rounded-2xl border text-center justify-center sm:justify-start transition-all duration-300 font-semibold text-xs cursor-pointer bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 ${action.color}`}
                   >
                     <action.icon className="w-5 h-5 flex-shrink-0" />
                     <span>{action.label}</span>
@@ -608,12 +608,12 @@ function UserDashboard() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.05 }}
                     whileHover={{ scale: 1.02, y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                    className={`relative overflow-hidden group border-l-4 ${stat.color} p-5 rounded-2xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 cursor-pointer transition-all duration-300`}
+                    className={`relative overflow-hidden group border-l-4 ${stat.color} p-5 rounded-2xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 cursor-pointer transition-all duration-300`}
                   >
                     <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:scale-110 transition-transform">
                       <stat.icon className="w-12 h-12 text-slate-800 dark:text-white" />
                     </div>
-                    <p className="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider">{stat.label}</p>
+                    <p className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase tracking-wider">{stat.label}</p>
                     <p className="text-2xl font-bold font-display mt-2 bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
                       {stat.value}
                     </p>
@@ -626,7 +626,7 @@ function UserDashboard() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl"
+                className="p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl"
               >
                 <div className="flex items-center justify-between mb-4 border-b border-slate-200 dark:border-white/5 pb-3">
                   <div className="flex items-center gap-2">
@@ -651,7 +651,7 @@ function UserDashboard() {
                   ].map((stat) => (
                     <div key={stat.label} className="p-4 bg-slate-50/50 dark:bg-white/[0.02] border border-slate-100 dark:border-white/5 rounded-2xl flex flex-col justify-between h-24">
                       <div className="flex justify-between items-center">
-                        <span className="text-[10px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider">{stat.label}</span>
+                        <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase tracking-wider">{stat.label}</span>
                         <stat.icon className={`w-4 h-4 ${stat.color}`} />
                       </div>
                       <span className="text-xl font-extrabold text-slate-900 dark:text-white block mt-2 truncate">{stat.value}</span>
@@ -839,9 +839,9 @@ function UserDashboard() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="space-y-4 p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
+                className="space-y-4 p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
               >
-                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Today's Resume Checklist</h3>
+                <h3 className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest">Today's Resume Checklist</h3>
                 <div className="space-y-2.5">
                   {checklist.map(g => (
                     <div 
@@ -873,9 +873,9 @@ function UserDashboard() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15 }}
-                className="text-center space-y-4 p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
+                className="text-center space-y-4 p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
               >
-                <h3 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Average ATS Score</h3>
+                <h3 className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest">Average ATS Score</h3>
                 
                 <div className="relative w-32 h-32 mx-auto flex items-center justify-center">
                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
@@ -901,7 +901,7 @@ function UserDashboard() {
                   </svg>
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <span className="text-2xl font-extrabold font-display text-slate-900 dark:text-white">{stats.avgAtsScore || 0}%</span>
-                    <span className="text-[9px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider">ATS Readiness</span>
+                    <span className="text-[9px] text-slate-600 dark:text-slate-400 font-bold uppercase tracking-wider">ATS Readiness</span>
                   </div>
                 </div>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed px-2">
@@ -917,7 +917,7 @@ function UserDashboard() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 whileHover={{ scale: 1.02, y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="flex flex-col justify-between p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 cursor-pointer transition-all duration-300"
+                className="flex flex-col justify-between p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 cursor-pointer transition-all duration-300"
               >
                 <div>
                   <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-4">
@@ -956,7 +956,7 @@ function UserDashboard() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 }}
                 whileHover={{ scale: 1.02, y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="flex flex-col justify-between p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 cursor-pointer transition-all duration-300"
+                className="flex flex-col justify-between p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 cursor-pointer transition-all duration-300"
               >
                 <div>
                   <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-4">
@@ -993,7 +993,7 @@ function UserDashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   whileHover={{ scale: 1.02, y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                  className="relative overflow-hidden group p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 cursor-pointer transition-all duration-300"
+                  className="relative overflow-hidden group p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 cursor-pointer transition-all duration-300"
                 >
                   <div className="absolute top-0 right-0 p-4 opacity-5 dark:opacity-10">
                     <Lightbulb className="w-14 h-14 text-brand-500" />
@@ -1015,10 +1015,10 @@ function UserDashboard() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
-                className="space-y-4 p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
+                className="space-y-4 p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest flex items-center gap-2">
+                  <h3 className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest flex items-center gap-2">
                     <Award className="w-4 h-4 text-brand-500" />
                     Achievements
                   </h3>
@@ -1069,9 +1069,9 @@ function UserDashboard() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="space-y-4 p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
+                className="space-y-4 p-6 rounded-3xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/30 dark:shadow-none dark:hover:shadow-indigo-500/20 transition-all duration-300"
               >
-                <h3 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest flex items-center gap-2">
+                <h3 className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest flex items-center gap-2">
                   <Activity className="w-4 h-4 text-brand-500" />
                   Recent Activity
                 </h3>

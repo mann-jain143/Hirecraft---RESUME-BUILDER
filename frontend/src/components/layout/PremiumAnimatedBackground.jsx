@@ -150,7 +150,7 @@ export default function PremiumAnimatedBackground() {
       <canvas
         ref={canvasRef}
         className="hidden dark:block w-full h-full opacity-90"
-        style={{ display: 'block', width: '100%', height: '100%' }}
+        style={{ width: '100%', height: '100%' }}
       />
     </div>
   );

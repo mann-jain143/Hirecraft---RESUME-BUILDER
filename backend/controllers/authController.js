@@ -17,12 +17,13 @@ export const registerUser = async (req, res) => {
       return res.status(400).json({ message: 'Please provide all required fields' });
     }
 
-    const userExists = await User.findOne({ email });
+    const cleanEmail = email.trim().toLowerCase();
+    const userExists = await User.findOne({ email: cleanEmail });
     if (userExists) {
       return res.status(400).json({ message: 'User already exists with this email' });
     }
 
-    const user = await User.create({ name, email, password });
+    const user = await User.create({ name, email: cleanEmail, password });
     
     // Check invite token if provided during signup
     if (inviteToken) {
@@ -61,7 +62,8 @@ export const loginUser = async (req, res) => {
       return res.status(400).json({ message: 'Please provide email and password' });
     }
 
-    const user = await User.findOne({ email }).select('+password');
+    const cleanEmail = email.trim().toLowerCase();
+    const user = await User.findOne({ email: cleanEmail }).select('+password');
 
     if (user && (await user.matchPassword(password))) {
       if (user.status === 'suspended') {
@@ -262,14 +264,15 @@ export const googleLogin = async (req, res) => {
       return res.status(400).json({ message: 'Unable to extract email from Google token' });
     }
 
+    const cleanEmail = email.trim().toLowerCase();
     // Find existing user or create a new one
-    let user = await User.findOne({ email });
+    let user = await User.findOne({ email: cleanEmail });
 
     if (!user) {
       const randomPassword = crypto.randomBytes(32).toString('hex');
       user = await User.create({
-        name: name || email.split('@')[0],
-        email,
+        name: name || cleanEmail.split('@')[0],
+        email: cleanEmail,
         password: randomPassword,
       });
     }
